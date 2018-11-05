@@ -1,8 +1,5 @@
 package com.example.demo.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,10 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
@@ -34,21 +28,17 @@ public class DayPeriod {
 		@ManyToOne
 		@JoinColumn(name="p_id")
 		private Period period ;
-		
-		@OneToMany(mappedBy="dayperiod")
-		@JsonIgnore
-		private List<YearTable> yeartable = new ArrayList<>();
 
 		public DayPeriod() {
 		
 			// TODO Auto-generated constructor stub
 		}
 
-		public DayPeriod(Integer id, Day day,  Period period) {
+		public DayPeriod(Integer id, Integer d_id, Integer p_id) {
 			super();
 			this.id = id;
-			this.day = day;
-			this.period = period;
+			this.d_id = d_id;
+			this.p_id = p_id;
 		}
 
 		public Integer getId() {
@@ -59,22 +49,22 @@ public class DayPeriod {
 			this.id = id;
 		}
 
-		public Day getDay() {
-			return day;
+		public Integer getD_id() {
+			return d_id;
 		}
 
-		public void setDay(Day day) {
-			this.day = day;
+		public void setD_id(Integer d_id) {
+			this.d_id = d_id;
 		}
 
-		public Period getPeriod() {
-			return period;
+		public Integer getP_id() {
+			return p_id;
 		}
 
-		public void setPeriod(Period period) {
-			this.period = period;
+		public void setP_id(Integer p_id) {
+			this.p_id = p_id;
 		}
-
-}
+			
+	}
 
 

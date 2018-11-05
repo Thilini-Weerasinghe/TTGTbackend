@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +17,8 @@ import javax.persistence.Table;
 
 public class YearTable {
 
+	
+	
 
 		@Id
 		@GeneratedValue(strategy=GenerationType.AUTO)
@@ -39,18 +42,14 @@ public class YearTable {
 			
 			// TODO Auto-generated constructor stub
 		}
-		
-		
 
-		public YearTable(Integer id, DayPeriod dayperiod, Subject subject, LectureHall lechall) {
+		public YearTable(Integer id, Integer dp_id, Integer s_id, Integer lh_id) {
 			super();
 			this.id = id;
-			this.dayperiod = dayperiod;
-			this.subject = subject;
-			this.lechall = lechall;
+			this.dp_id = dp_id;
+			this.s_id = s_id;
+			this.lh_id = lh_id;
 		}
-
-
 
 		public Integer getId() {
 			return id;
@@ -60,30 +59,30 @@ public class YearTable {
 			this.id = id;
 		}
 
-		public DayPeriod getDayperiod() {
-			return dayperiod;
+		public Integer getDp_id() {
+			return dp_id;
 		}
 
-		public void setDayperiod(DayPeriod dayperiod) {
-			this.dayperiod = dayperiod;
+		public void setDp_id(Integer dp_id) {
+			this.dp_id = dp_id;
 		}
 
-		public Subject getSubject() {
-			return subject;
+		public Integer getS_id() {
+			return s_id;
 		}
 
-		public void setSubject(Subject subject) {
-			this.subject = subject;
+		public void setS_id(Integer s_id) {
+			this.s_id = s_id;
 		}
 
-		public LectureHall getLechall() {
-			return lechall;
+		public Integer getLh_id() {
+			return lh_id;
 		}
 
-		public void setLechall(LectureHall lechall) {
-			this.lechall = lechall;
+		public void setLh_id(Integer lh_id) {
+			this.lh_id = lh_id;
 		}
-
+		
 		
 		
 		

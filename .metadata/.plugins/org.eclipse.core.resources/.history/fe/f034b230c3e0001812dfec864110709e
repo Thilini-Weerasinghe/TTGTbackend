@@ -14,35 +14,29 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="period")
-
-
-public class Period {
-
-	
+@Table(name="day")
+public class Day {
 
 		@Id
 		@GeneratedValue(strategy=GenerationType.AUTO)
-		
 		@Column(name="id")
 		private Integer id;
 		
-		@Column(name="time")
-		private String time;
+		@Column(name="name")
+		private String name;
 		
-		@OneToMany(mappedBy="period")
+		@OneToMany(mappedBy="day")
 		@JsonIgnore
-		private List <DayPeriod> dayperiod = new ArrayList<>();
+		private List <DayPeriod> dayperiod = new ArrayList();
 
-		public Period() {
+		public Day() {
 			
-			// TODO Auto-generated constructor stub
 		}
 
-		public Period(Integer id, String time) {
+		public Day(Integer id, String name) {
 			super();
 			this.id = id;
-			this.time = time;
+			this.name = name;
 		}
 
 		public Integer getId() {
@@ -53,15 +47,13 @@ public class Period {
 			this.id = id;
 		}
 
-		public String getTime() {
-			return time;
+		public String getName() {
+			return name;
 		}
 
-		public void setTime(String time) {
-			this.time = time;
+		public void setName(String name) {
+			this.name = name;
 		}
-		
-		
 		
 		
 	}

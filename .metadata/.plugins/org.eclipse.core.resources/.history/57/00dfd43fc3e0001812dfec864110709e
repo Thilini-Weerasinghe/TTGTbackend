@@ -1,17 +1,11 @@
 package com.example.demo.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="period")
@@ -29,10 +23,6 @@ public class Period {
 		
 		@Column(name="time")
 		private String time;
-		
-		@OneToMany(mappedBy="period")
-		@JsonIgnore
-		private List <DayPeriod> dayperiod = new ArrayList<>();
 
 		public Period() {
 			
