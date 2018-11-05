@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.example.demo.model.Subject"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="com.example.demo.model.DayPeriod"/>
+<fullyQualifiedTypeName name="com.example.demo.model.Day"/>
+<fullyQualifiedTypeName name="com.example.demo.model.LectureHall"/>
+<fullyQualifiedTypeName name="com.example.demo.model.Lecturer"/>
+<fullyQualifiedTypeName name="com.example.demo.model.Period"/>
+<fullyQualifiedTypeName name="com.example.demo.model.YearTable"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+</qualifiedTypeNameHistroy>
